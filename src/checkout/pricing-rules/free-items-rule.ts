@@ -1,4 +1,4 @@
-import { PricingRule, Product } from '../types.js';
+import { PricingRule, Product } from '../types';
 
 export interface FreeItemsRuleSpecification {
   productId: string,

@@ -1,7 +1,6 @@
-import { Checkout, PricingRule, Product } from './types.js';
+import { Checkout, PricingRule, Product } from './types';
 
 export class CustomerCheckout implements Checkout {
-
   private items: Product[] = [];
   constructor(private pricingRules?: PricingRule) {}
 
@@ -10,7 +9,10 @@ export class CustomerCheckout implements Checkout {
   }
 
   total(): number {
-    let total = this.items.reduce((total, checkoutItem) => total + checkoutItem.retailPrice, 0);
+    let total = this.items.reduce(
+      (total, checkoutItem) => total + checkoutItem.retailPrice,
+      0,
+    );
 
     if (this.pricingRules) {
       total = total - this.pricingRules.apply(this.items);
@@ -18,5 +20,4 @@ export class CustomerCheckout implements Checkout {
 
     return total;
   }
-
 }

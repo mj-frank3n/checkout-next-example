@@ -1,7 +1,7 @@
-import { CustomerPricing, PricingRule } from '../types.js';
-import { FixedPriceRule, FixedPriceRuleSpecification } from './fixed-price-rule.js';
-import { FreeItemsRule, FreeItemsRuleSpecification } from './free-items-rule.js';
-import { PricingRulesAggregator } from '../pricing-rules-aggregator.js';
+import { CustomerPricing, PricingRule } from '../types';
+import { FixedPriceRule, FixedPriceRuleSpecification } from './fixed-price-rule';
+import { FreeItemsRule, FreeItemsRuleSpecification } from './free-items-rule';
+import { PricingRulesAggregator } from '../pricing-rules-aggregator';
 
 export enum PricingRuleType {
   FREE_ITEMS = 'FREE_ITEMS',
